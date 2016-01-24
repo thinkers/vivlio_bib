@@ -391,9 +391,9 @@ var tom = {
 
 			if (figurl) $('.drawer__item--img').hide().append('<img src="'+figurl+'" alt="'+figalt+'" />').fadeIn();
 			if (title)  $('.drawer__content--header').hide().append(title).fadeIn();
-			if (death)  $('.drawer__content--header').after('<p><em>('+birth+' to '+death+')</em></p>').hide().fadeIn();
+			if (death)  $('.drawer__content--sub').hide().append('<em>('+birth+' to '+death+')</em>').hide().fadeIn();
 			if (desc)   $('.drawer__content--desc').hide().append(desc).fadeIn();
-			if (figsrc) $('.drawer__content--desc').hide().append('<p class="text-muted">'+figsrc+' &mdash; '+figavl+'</p>').fadeIn();
+			if (figsrc) $('.drawer__content--src').hide().append('<p class="text-muted">'+figsrc+' &mdash; '+figavl+'</p>').fadeIn();
 
 
 			var arduino_req = function(pinid, state) {
@@ -439,7 +439,9 @@ var tom = {
 		//$('#drawer .drawer').children().empty();
 		$('.drawer__item--img').empty();
 		$('.drawer__content--header').empty();
+		$('.drawer__content--sub').empty();
 		$('.drawer__content--desc').empty();
+		$('.drawer__content--src').empty();
 	},
 	highlightElement: function(elem) {
 		$('.highlighted').removeClass('highlighted');
