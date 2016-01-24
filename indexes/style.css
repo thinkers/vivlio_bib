@@ -3,10 +3,10 @@
 
 .indexes {
 	background-color: #E1E1E1;
-	background-image: url("img/bg_mark.png");
-	background-position: 0 170px;
+	background-image: url("img/logo.png");
+	background-position: bottom center;
 	background-repeat: no-repeat;
-	background-size: 500px;
+	background-size: 800px;
 	background-attachment: fixed;
 	padding: 0 20px;
 }
