@@ -7,12 +7,34 @@ module.exports = function(grunt) {
   grunt.initConfig({
 	connect: {
 		options: {
+			middleware: function(connect, options) {
+				return [
+					function(req, res, next) {
+						res.setHeader('Access-Control-Allow-Origin', '*');
+						res.setHeader('Access-Control-Allow-Methods', 'GETUTOST,DELETE');
+						res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+						return next();
+					},
+					connect.static(require('path').resolve('.'))
+				];
+			},
 			hostname: '0.0.0.0',
 			port: 9000
 		}
 	},
     serve: {
         options: {
+			middleware: function(connect, options) {
+				return [
+					function(req, res, next) {
+						res.setHeader('Access-Control-Allow-Origin', '*');
+						res.setHeader('Access-Control-Allow-Methods', 'GETUTOST,DELETE');
+						res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+						return next();
+					},
+					connect.static(require('path').resolve('.'))
+				];
+			},
             port: 9000
         }
     },

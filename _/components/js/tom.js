@@ -367,6 +367,7 @@ var tom = {
 		const ARDUINO_API_BASE_URL = 'http://vivlioyun.local/arduino/';
 		const ARDUINO_API_LED_ON   = '/1';
 		const ARDUINO_API_LED_OFF  = '/0';
+		const ARDUINO_API_BAD_ID   = '#badid';
 
 		$('span[data-type="obRef"], span[data-type="placeRef"], span[data-type="persRef"]').on('click', function() {
 
@@ -396,27 +397,32 @@ var tom = {
 			if (figsrc) $('.drawer__content--src').hide().append('<p class="text-muted">'+figsrc+' &mdash; '+figavl+'</p>').fadeIn();
 
 
-			var arduino_req = function(pinid, state) {
-				var requrl = ARDUINO_API_BASE_URL + pinid + state;
-				console.log(requrl);
+			var arduino_request = function(pin_id) {
+				var pin_id_prev = tom.prev_pin_id || ARDUINO_API_BAD_ID;
+				var req_url_prev = ARDUINO_API_BASE_URL + pin_id_prev + ARDUINO_API_LED_OFF;
+				var req_url_curr = ARDUINO_API_BASE_URL + pin_id      + ARDUINO_API_LED_ON;
 
-				$.ajax(requrl)
-					.done(function(data) {
-						console.log('done');
-						tom.prevpinid = pinid;
-					})
-					.fail(function(data) {
-						console.log('failed');
-						tom.prevpinid = null;
-					})
-					.always(function(data) {
-						console.log(data);
-					});
+				console.log(req_url_prev);
+				console.log(req_url_curr);
+
+				$.ajax(req_url_prev).always(function() {
+					$.ajax(req_url_curr)
+						.done(function(data) {
+							console.log('done');
+						})
+						.fail(function(data) {
+							console.log('failed');
+						})
+						.always(function(data) {
+							tom.prev_pin_id = pin_id;
+							console.log(data);
+						});
+				})
 			};
 
-			var pinid = $this.data('ref').substring(1); /* remove '#' symbol */
-			if (tom.prevpinid) arduino_req(tom.prevpinid, ARDUINO_API_LED_OFF);
-			if (pinid)         arduino_req(pinid,         ARDUINO_API_LED_ON);
+			var pin_id = $this.data('ref') || ARDUINO_API_BAD_ID;
+			pin_id = pin_id.substring(1); /* remove '#' symbol */
+			arduino_request(pin_id);
 		});
 
 		$('.was-distinct .was-orig').on('click', function(){
