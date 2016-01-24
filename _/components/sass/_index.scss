@@ -1,0 +1,152 @@
+.main-cover {
+	position: relative;
+	//height: 800px;
+	@include breakpoint($xsphone) {
+		height: 78vh;
+	}
+	@include breakpoint($phone) {
+		height: 78vh;
+	}
+	@include breakpoint($tablet) {
+		height: 80vh;
+	}
+	@include breakpoint($medium) {
+		height: 80vh;
+	}
+	@include breakpoint($large) {
+		height: 80vh;
+	}
+	margin-bottom: 0;
+	overflow: hidden;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	z-index: 0;
+	-webkit-transition: height 50ms cubic-bezier(0.42, 0, 0.58, 1);
+	   -moz-transition: height 50ms cubic-bezier(0.42, 0, 0.58, 1);
+	    -ms-transition: height 50ms cubic-bezier(0.42, 0, 0.58, 1);
+	     -o-transition: height 50ms cubic-bezier(0.42, 0, 0.58, 1);
+	        transition: height 500ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.logo {
+	position: absolute;
+	left: 50%;
+	height: auto;
+	@include breakpoint($xsphone) {
+		display: none;
+	}
+	@include breakpoint($phone) {
+		display: none;
+	}
+	@include breakpoint($tablet) {
+		width: 750px;
+		height: 552px;
+		top: 50%;
+		margin-left: -375px;
+		margin-top: -276px;
+		display: block;
+	}
+	@include breakpoint($medium) {
+		width: 750px;
+		height: 552px;
+		top: 50%;
+		margin-left: -375px;
+		margin-top: -276px;
+		display: block;
+	}
+	@include breakpoint($large) {
+		width: 750px;
+		height: 552px;
+		top: 50%;
+		margin-left: -375px;
+		margin-top: -276px;
+		display: block;
+	}
+}
+.logo-portrait {
+	position: absolute;
+	left: 50%;
+	height: auto;
+	@include breakpoint($xsphone) {
+		width: 190px;
+		margin-left: -95px;
+		top: 5%;
+		display: block;
+	}
+	@include breakpoint($phone) {
+		width: 350px;
+		margin-left: -175px;
+		top: 5%;
+		display: block;
+	}
+	@include breakpoint($tablet) {
+		display: none;
+	}
+	@include breakpoint($medium) {
+		display: none;
+	}
+	@include breakpoint($large) {
+		display: none;
+	}
+}
+
+.buttons {
+	text-align: center;
+	@include breakpoint($xsphone) {
+		padding-top: 25px;
+	}
+	@include breakpoint($phone) {
+		padding-top: 25px;
+	}
+	@include breakpoint($tablet) {
+		padding-top: 50px;
+	}
+	@include breakpoint($medium) {
+		padding-top: 50px;
+	}
+	@include breakpoint($large) {
+		padding-top: 50px;
+	}
+}
+a.button {
+	font-family: $font-nav;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	display: inline-block;
+	color: #fff;
+	background-color: #000;
+	font-size: 1.5rem;
+	padding: 10px;
+	width: 100px;
+	text-decoration: none;
+}
+a.button:hover,
+a.button:focus,
+a.button:visited,
+a.button:active,
+a.button:link {
+	color: #fff;
+	text-decoration: none;
+}
+a.button:first-child {
+	@include breakpoint($xsphone) {
+		margin-right: 20px;
+	}
+	@include breakpoint($phone) {
+		margin-right: 20px;
+	}
+	@include breakpoint($tablet) {
+		margin-right: 50px;
+	}
+	@include breakpoint($medium) {
+		margin-right: 50px;
+	}
+	@include breakpoint($large) {
+		margin-right: 50px;
+	}
+}
+
+
+

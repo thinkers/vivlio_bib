@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>A Child’s History of England</title>
+		<meta name="description" content="A Child’s History of England" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<link href="/indexes/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="/indexes/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="/indexes/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		<script src="//use.typekit.net/hvc1zhu.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+
+		<link rel="stylesheet" href="/indexes/style.css"/>
+	</head>
+
+	<body class="indexes">
+		<div id="header" class="text-center">
+			<a class="center-block" href="/index.html" title="home"><span class="symbol--home">&gt;</span><br/>HOME</a>
+		</div>
+
+		<div id="content">
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingPlaces">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapsePlaces" aria-expanded="true" aria-controls="collapsePlaces">
+								PLACES
+							</a>
+						</h4>
+					</div>
+					<div id="collapsePlaces" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingPlaces">
+						<div class="panel-body" id="places">
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingObjects">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseObjects" aria-expanded="true" aria-controls="collapseObjects">
+								OBJECTS
+							</a>
+						</h4>
+					</div>
+					<div id="collapseObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingObjects">
+						<div class="panel-body" id="objects">
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingCharacters">
+						<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseCharacters" aria-expanded="true" aria-controls="collapseCharacters">
+								CHARACTERS
+							</a>
+						</h4>
+					</div>
+					<div id="collapseCharacters" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingCharacters">
+						<div class="panel-body" id="characters">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<script>
+			var hideBlank = function() {
+				$('[src="media/characters/blank.jpg"]').parent('figure').parent().css("display", "none");
+			};
+			$(function() {
+				$("#characters")   .load("data/characters.html    .characters",    hideBlank);
+				$("#objects")      .load("data/objects.html       .objects",       hideBlank);
+				$("#places")       .load("data/places.html        .places",        hideBlank);
+			});
+		</script>
+	</body>
+</html>

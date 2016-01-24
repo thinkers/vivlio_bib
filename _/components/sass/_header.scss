@@ -1,0 +1,327 @@
+#header * {
+	-webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	@include zIndex(99px);
+	@include breakpoint($xsphone) {
+		height: $header-height-small;
+	}
+	@include breakpoint($phone) {
+		height: $header-height-small;
+	}
+	@include breakpoint($tablet) {
+		height: $header-height-large;
+	}
+	@include breakpoint($medium) {
+		height: $header-height-large;
+	}
+	@include breakpoint($large) {
+		height: $header-height-large;
+	}
+}
+.header-container {
+	font-size: 18px;
+	margin: 0 auto;
+	@include breakpoint($xsphone) {
+		width: $read-width-xsphone;
+	}
+	@include breakpoint($phone) {
+		width: $read-width-phone;
+	}
+	@include breakpoint($tablet) {
+		width: $tablet;
+	}
+	@include breakpoint($medium) {
+		width: $medium;
+	}
+	@include breakpoint($large) {
+		width: $large;
+	}	
+}
+
+.nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.nav__item {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	@include breakpoint($xsphone) {
+		height: $header-height-small;
+	}
+	@include breakpoint($phone) {
+		height: $header-height-small;
+	}
+	@include breakpoint($tablet) {
+		height: $header-height-large;
+	}
+	@include breakpoint($medium) {
+		height: $header-height-large;
+	}
+	@include breakpoint($large) {
+		height: $header-height-large;
+	}	
+}
+
+.nav__symbol {
+	font-family: $font-nav-symbols;
+	@include breakpoint($xsphone) {
+		height: $header-height-small/2;
+	}
+	@include breakpoint($phone) {
+		height: $header-height-small/2;
+	}
+	@include breakpoint($tablet) {
+		height: $header-height-large/3;
+	}
+	@include breakpoint($medium) {
+		height: $header-height-large/3;
+	}
+	@include breakpoint($large) {
+		height: $header-height-large/3;
+	}
+}
+.nav__text {
+	font-family: $font-nav;
+	font-size: 1rem;
+	@include breakpoint($xsphone) {
+		height: $header-height-small/2;
+	}
+	@include breakpoint($phone) {
+		height: $header-height-small/2;
+	}
+	@include breakpoint($tablet) {
+		height: $header-height-large*2/3;
+	}
+	@include breakpoint($medium) {
+		height: $header-height-large*2/3;
+	}
+	@include breakpoint($large) {
+		height: $header-height-large*2/3;
+	}
+	-webkit-transition: all 0.1s ease-in-out;
+	   -moz-transition: all 0.1s ease-in-out;
+	     -o-transition: all 0.1s ease-in-out;
+	    	transition: all 0.1s ease-in-out;
+}
+
+.nav__item--magic {
+	cursor: pointer;
+}
+.nav__item.nav__item--magic {
+	text-align: left;
+}
+
+.nav__item--home {
+	cursor: pointer;
+	text-align: center;
+	@include breakpoint($xsphone) {
+	  	width: $read-width-xsphone/3;
+	}
+	@include breakpoint($phone) {
+	  	width: $read-width-phone/3;
+	}
+	@include breakpoint($tablet) {
+	  	width: ($tablet - $read-width-tablet)/2;
+	}
+	@include breakpoint($medium) {
+	  	width: ($medium - $read-width-medium)/2;
+	}
+	@include breakpoint($large) {
+		width: ($large - $read-width-large)/2;
+	}	
+}
+.nav__item--title {
+	text-align: left;
+	@include breakpoint($xsphone) {
+	  	width: 0;
+	}
+	@include breakpoint($phone) {
+	  	width: 0;
+	}
+	@include breakpoint($tablet) {
+	  	width: $read-width-tablet  - 230;
+	}
+	@include breakpoint($medium) {
+	  	width: $read-width-medium - 250;
+	}
+	@include breakpoint($large) {
+		width: $read-width-large - 250;
+	}	
+}
+.nav__item--toc {
+	text-align: center;
+	@include breakpoint($xsphone) {
+	  	width: $read-width-xsphone/3;
+	}
+	@include breakpoint($phone) {
+	  	width: $read-width-phone/3;
+	}
+	@include breakpoint($tablet) {
+	  	width: 230px;
+	}
+	@include breakpoint($medium) {
+	  	width: 250px;
+	}
+	@include breakpoint($large) {
+		width: 250px;
+	}	
+}
+
+.nav__item--magic {
+	position: relative;
+	@include breakpoint($xsphone) {
+	  	width: $read-width-xsphone/3;
+	  	margin-left: 0;
+	}
+	@include breakpoint($phone) {
+	  	width: $read-width-phone/3;
+	  	margin-left: 0;
+	}
+	@include breakpoint($tablet) {
+	  	width: ($tablet - $read-width-tablet)/2 - 25;
+	  	margin-left: 25px;
+	}
+	@include breakpoint($medium) {
+	  	width: ($medium - $read-width-medium)/2 - 20;
+	  	margin-left: 20px;
+	}
+	@include breakpoint($large) {
+		width: ($large - $read-width-large)/2 - 20;
+		margin-left: 20px;
+	}
+}
+
+.symbol--home {
+	display:block;
+	font-size: 2.5rem;
+	-webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+    	 -o-transform: rotate(-90deg);
+    		transform: rotate(-90deg);
+}
+.symbol--toc {
+	cursor: pointer;
+	display:block;
+	font-size: 2.5rem;
+	-webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+    	 -o-transform: rotate(90deg); 
+    		transform: rotate(90deg);
+
+    -webkit-transition: all 0.5s ease-out;
+       -moz-transition: all 0.5s ease-out;
+         -o-transition: all 0.5s ease-out;
+        	transition: all 0.5s ease-out;
+
+    
+}
+.symbol--toc.open {
+	display:block;
+	font-size: 2.5rem;
+	-webkit-transform: rotate(270deg);
+       -moz-transform: rotate(270deg);
+    	 -o-transform: rotate(270deg); 
+    		transform: rotate(270deg);
+
+
+}
+.symbol--magic {
+	display: block;
+	padding-top: 3px;
+	padding-left: 5px;
+	font-size: 4.5rem;
+}
+
+h1.was-head {
+	opacity: 1;
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #000;
+	-webkit-transition: opacity 0.1s ease-in-out;
+	   -moz-transition: opacity 0.1s ease-in-out;
+	     -o-transition: opacity 0.1s ease-in-out;
+	    	transition: opacity 0.1s ease-in-out;
+}
+
+h1.was-head.stuck {
+	//opacity: 0
+}
+
+.sticky-wrapper {
+
+}
+
+p.was-milestone,
+p.was-anchor {
+	//display: none;
+	opacity: 0;
+	//position: relative;
+	font-family: $font-nav;
+	font-size: 1.4rem;
+	color: gray;
+	//@include zIndex(999px);
+	padding: 0;
+	margin: 0;
+	// -moz-transition: opacity 0.1s ease-in-out;
+	//   -o-transition: opacity 0.1s ease-in-out;
+	// 	 transition: opacity 0.1s ease-in-out;
+}
+
+p.was-milestone.stuck {
+	//opacity: 0;
+	//display: none;
+}
+p.was-anchor.stuck {
+	//opacity: 0;
+	//display: none;
+}
+
+p.chapter__title {
+	display: block;
+	font-family: $font-headings;
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #000;
+	margin: 8px 0;
+}
+p.chapter__milestone,
+p.chapter__anchor {
+	display: block;
+	//height: 15px;
+	font-family: $font-nav;
+}
+p.chapter__milestone {
+	height: $mobile-header-scene-height;
+	// margin: 10px 0 8px 0;
+	margin: 0;
+	font-size: 1.4rem;
+	color: #000;
+}
+p.chapter__anchor {
+	height: $mobile-header-anchor-height;
+	margin: 0;
+	font-size: 1.3rem;
+	color: gray;
+	//font-style: italic;
+}

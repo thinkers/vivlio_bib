@@ -1,0 +1,152 @@
+.donotscroll {
+	overflow: hidden;
+}
+
+#navdrop {
+	display: none;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+	@include zIndex(999px);
+	// -webkit-transition: all 1.2s ease-in-out;
+	//    -moz-transition: all 1.2s ease-in-out;
+	//      -o-transition: all 1.2s ease-in-out;
+	//     	transition: all 1.2s ease-in-out;
+}
+
+#navdrop::-webkit-scrollbar,
+#navdrop> section::-webkit-scrollbar {
+    display: none;
+}
+
+#navdrop > section {
+	position: absolute;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	//width: 12em;
+	@include breakpoint($xsphone) {
+	  	width: $read-width-xsphone;
+	  	margin-left: 0 auto;
+	  	top: 0px;
+		right: -110px;
+	}
+	@include breakpoint($phone) {
+	  	width: $read-width-phone;
+	  	margin-left: 0 auto;
+	  	top: 0px;
+		right: -135px;
+	}
+	@include breakpoint($tablet) {
+	  	width: 230px;
+	  	top: 0px;
+		right: 0px;
+	}
+	@include breakpoint($medium) {
+	  	width: 250px;
+	  	top: 0px;
+		right: 0px;
+	}
+	@include breakpoint($large) {
+		width: 250px;
+		top: 0px;
+		right: 0px;
+	}
+}
+
+#navdrop > section > h1,
+#navdrop > section > h2,
+#navdrop > section > h3,
+#navdrop > section > p,
+#navdrop > section > .graphic {
+	padding: 0;
+	margin: 15px auto;
+}
+
+#navdrop > section {
+	counter-reset: scene-counter;
+	text-align: center;
+	margin: auto;
+	background: #fff;
+	border-left: 1px solid #222;
+	border-right: 1px solid #222;
+}
+
+#navdrop > section > p {
+	padding: 0 10px;
+}
+
+#navdrop > section > h1 {
+	display: block;
+	position: relative;
+	background: #222;
+	color: #EAEAEA;
+	margin: 0 auto;
+	padding: 10px 0;
+	margin: 0;
+	font-family: $font-nav;
+	font-weight: 400;
+	font-size: 90%;
+}
+
+#navdrop > section > h1 > a {
+	cursor: pointer;
+	position: absolute;
+	color: #fff;
+	text-decoration: none;
+	padding: 0 10px;
+}
+#navdrop > section > h1 > a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+#navdrop > section > h1 > a.prev {
+	left: 5px;
+	border-right: 1px solid #888;
+}
+#navdrop > section > h1 > a.next {
+	right: 5px;
+	border-left: 1px solid #888;
+}
+
+#navdrop > section > h2 {
+	font-family: $font-nav-body;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+#navdrop > section > h3 {
+	font-family: $font-nav;
+	font-weight: 900;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#navdrop > section > p {
+	font-family: $font-nav-body;
+	font-style: italic;
+	line-height: 1.2;
+}
+
+#navdrop > section > .graphic > img {
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	border: 1px solid #333;
+}
+
+#navdrop > section > h2:before,
+#navdrop > section > .graphic:before {
+	content: "•";
+	font-size: 30px;
+	white-space: pre;
+	display: block;
+	margin: 10px auto;
+}
+#navdrop > section > h3:before {
+	counter-increment: scene-counter;
+	content: "\a◆\a\ascene " counter(scene-counter);
+	white-space: pre;
+	display: block;
+	margin: 10px auto;
+	font-family: $font-nav;
+	font-weight: 400;
+}

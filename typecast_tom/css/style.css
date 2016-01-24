@@ -1,0 +1,332 @@
+body {
+	 padding: 50px 0;
+	 font-size: 19px;
+	 font-family: HelveticaNeueETW01-55Rg;
+}
+
+article {
+	 margin: 0 auto;
+	 width: 800px;
+	 -webkit-box-sizing: border-box;
+	 -moz-box-sizing: border-box;
+	 box-sizing: border-box;
+}
+
+h1 {
+	 font-family: brioso-pro-display;
+	 font-size: 55px;
+	 line-height: 55px;
+	 text-align: center;
+	 text-transform: capitalize;
+	 font-weight: 400;
+	 font-style: Normal;
+}
+
+p.intro {
+	 font-family: HelveticaNeueETW02-45Lt;
+	 font-size: 1.368em;
+	 border-top: 1px;
+	 border-bottom: 1px;
+	 padding: 1.154em;
+	 text-align: center;
+	 border-style: solid;
+	 line-height: 1.5em;
+	 margin: 1.038em 0px;
+	 width: 700px;
+}
+
+p {
+	 font-size: 24px;
+	 line-height: 36px;
+	 color: rgba(51, 51, 51, 1);
+	 margin: 0px 0px 0em 0px;
+	 font-family: chaparral-pro;
+	 font-weight: 400;
+	 font-style: normal;
+	 background-color: rgba(255, 255, 255, 1);
+}
+
+h2 {
+	 font-size: 1.526em;
+	 font-family: HelveticaNeueETW02-65Md;
+	 line-height: 0.931em;
+	 margin: 0px 0px 0.931em 0px;
+}
+
+p.pullquote {
+	 padding-left: 10px;
+	 border-style: solid;
+	 font-size: 30px;
+	 line-height: 50px;
+	 margin: 0px 0px 0em 0px;
+	 font-family: "brandon-grotesque";
+	 font-weight: 300;
+	 font-style: italic;
+	 float: left;
+	 text-align: right;
+	 text-shadow: 0px 0px 0px rgba(188, 175, 175, 1);
+	 ;
+	color: rgba(112, 108, 108, 1);
+}
+
+p.author {
+	 text-align: center;
+	 font-size: 13px;
+	 letter-spacing: 2px;
+	 margin-top: 27px;
+}
+
+p.dialogue {
+	 font-family: "chaparral-pro";
+	 font-weight: 400;
+	 font-style: italic;
+	 -webkit-font-feature-settings: 'liga' 1, 'onum' 1;
+	 -o-font-feature-settings: 'liga' 1, 'onum' 1;
+	 -moz-font-feature-settings: 'liga' 1, 'onum' 1;
+	 -ms-font-feature-settings: 'liga' 1, 'onum' 1;
+	 font-feature-settings: 'liga' 1, 'onum' 1;
+	 color: rgba(0, 0, 0, 0.80);
+}
+
+em {
+	 font-family: "chaparral-pro";
+	 font-weight: 400;
+	 font-style: italic;
+	 color: rgba(17, 121, 191, 0.80);
+}
+
+span.smallcaps {
+	 font-family: "chaparral-pro";
+	 font-weight: 400;
+	 font-style: normal;
+	 text-transform: uppercase;
+	 font-size: 24px;
+	 letter-spacing: 2px;
+	 -webkit-font-feature-settings: 'kern' 1;
+	 -o-font-feature-settings: 'kern' 1;
+	 -moz-font-feature-settings: 'kern' 1;
+	 -ms-font-feature-settings: 'kern' 1;
+	 font-feature-settings: 'kern' 1;
+}
+
+p.milestone {
+	 background-color: rgba(255, 255, 255, 1);
+	 font-family: brandon-grotesque;
+	 font-weight: 400;
+	 font-style: normal;
+	 line-height: 25px;
+	 margin: 0px;
+	 color: rgba(0, 0, 0, 1);
+	 font-size: 16px;
+}
+
+p.summary {
+	 background-color: rgba(255, 255, 255, 1);
+	 font-family: brandon-grotesque;
+	 font-weight: 400;
+	 font-style: normal;
+	 line-height: 25px;
+	 margin: 0px;
+	 color: rgba(0, 0, 0, 1);
+	 font-size: 16px;
+}
+
+p.mdate {
+	 font-family: brandon-grotesque;
+	 font-weight: 400;
+	 font-style: normal;
+	 background-color: rgba(255, 255, 255, 1);
+	 margin: 0px;
+	 font-size: 16px;
+	 line-height: 25px;
+}
+
+p.anchor {
+	 background-color: rgba(255, 255, 255, 1);
+	 font-family: brandon-grotesque;
+	 font-weight: 400;
+	 font-style: normal;
+	 line-height: 25px;
+	 font-size: 16px;
+}
+
+span.orig {
+	 color: rgba(51, 51, 51, 1);
+	 background-color: rgba(239, 235, 201, 0.80);
+}
+
+span.reg {
+	 color: rgba(10, 10, 10, 0.80);
+	 background-color: rgba(228, 237, 218, 0.80);
+}
+
+span.obref {
+	 background-color: rgba(242, 234, 234, 0.80);
+}
+
+h1.chapter {
+	 font-family: "brandon-grotesque";
+	 font-weight: 500;
+	 font-style: normal;
+	 color: rgba(51, 51, 51, 1);
+	 line-height: 50px;
+	 font-size: 50px;
+}
+
+blockquote {
+	 text-align: right;
+	 font-size: 20px;
+}
+
+div.pull-quote-p:before {
+	 content: "";
+	 display: table;
+}
+
+div.pull-quote-p:after {
+	 content: "";
+	 display: table;
+	 clear: both;
+}
+
+div.pull-quote-p {
+	 width: auto;
+	 margin: 0;
+}
+
+blockquote.pull-quote-left {
+	 margin: 0em 1em 1em 0em;
+	 width: 40%;
+	 float: left;
+	 font-size: 1.6em;
+	 line-height: 1.2em;
+	 border-left: 3px solid #ccc;
+	 padding: 0em 0em 0em 0.7em;
+	 color: #666666;
+}
+
+span.measure {
+	 background-color: rgba(188, 173, 173, 1);
+}
+
+span.place {
+	 background-color: rgba(234, 157, 157, 1);
+}
+
+@media screen and (max-width: 1024px) {
+	 p.dialogue {
+	 font-family: "chaparral-pro";
+	 font-weight: 400;
+	 font-style: italic;
+	 color: rgba(0, 0, 0, 0.80);
+}
+
+h1 {
+	 color: rgba(0, 0, 0, 1);
+}
+
+p {
+	 padding: 0px 50px;
+	 font-size: 24px;
+	 text-transform: none;
+}
+
+span.smallcaps {
+	 text-transform: uppercase;
+	 font-size: 18px;
+	 letter-spacing: 2px;
+	 font-family: "chaparral-pro";
+	 font-weight: 700;
+	 font-style: normal;
+}
+
+p.milestone {
+	 font-family: "brandon-grotesque";
+	 font-weight: 300;
+	 font-style: normal;
+	 background-color: rgba(255, 255, 255, 1);
+	 color: rgba(0, 0, 0, 1);
+}
+
+p.summary {
+	 font-family: "brandon-grotesque";
+	 font-weight: 300;
+	 font-style: normal;
+	 background-color: rgba(255, 255, 255, 1);
+	 color: rgba(0, 0, 0, 1);
+}
+
+p.mdate {
+	 font-family: "brandon-grotesque";
+	 font-weight: 300;
+	 font-style: normal;
+	 color: rgba(0, 0, 0, 1);
+	 background-color: rgba(255, 255, 255, 1);
+}
+
+p.anchor {
+	 font-family: "brandon-grotesque";
+	 font-weight: 300;
+	 font-style: normal;
+	 color: rgba(0, 0, 0, 1);
+	 background-color: rgba(255, 255, 255, 1);
+}
+
+h1.chapter {
+	 font-family: "brandon-grotesque";
+	 font-weight: 900;
+	 font-style: normal;
+}
+
+span.measure {
+	 font-style: normal;
+	 background-color: rgba(247, 237, 237, 1);
+}
+
+} @media screen and (max-width: 900px) {
+	 article {
+	 margin: 0 auto;
+	 width: 100%;
+	 padding: 0 2em;
+}
+
+} @media screen and (max-width: 480px) {
+	 body {
+	 font-size: 90%;
+}
+
+h1 {
+	 font-size: 3.75em;
+	 line-height: 0.929em;
+}
+
+p {
+	 font-size: 21px;
+	 line-height: 25px;
+}
+
+p.pullquote {
+	 font-size: 16px;
+}
+
+blockquote {
+	 font-family: "chaparral-pro";
+	 font-weight: 300;
+	 font-style: italic;
+}
+
+} @media screen and (max-width: 320px) {
+	 h1 {
+	 font-size: 34px;
+}
+
+p.intro {
+	 font-size: 16px;
+}
+
+p {
+	 font-size: 18px;
+	 width: 0px;
+}
+
+} 

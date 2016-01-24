@@ -1,0 +1,66 @@
+span[data-type="obRef"],
+span[data-type="placeRef"],
+span[data-type="persRef"],
+.was-distinct .was-orig {
+	-webkit-transition: background 1.5s ease-in-out;
+	   -moz-transition: background 1.5s ease-in-out;
+	     -o-transition: background 1.5s ease-in-out;
+	     	transition: background 1.5s ease-in-out;
+}
+
+span[data-type="obRef"].highlight,
+span[data-type="placeRef"].highlight,
+span[data-type="persRef"].highlight,
+.was-distinct .was-orig.highlight {
+	cursor: pointer;
+	-webkit-transition: background 0.5s ease-in-out;
+	   -moz-transition: background 0.5s ease-in-out;
+	     -o-transition: background 0.5s ease-in-out;
+	     	transition: background 0.5s ease-in-out;
+}
+
+span[data-type="obRef"].highlight {
+	background-color: #e7e7e7;//#9D9D9C;
+}
+span[data-type="placeRef"].highlight {
+	background-color: #e7e7e7;//#B4B2A2;
+}
+span[data-type="persRef"].highlight {
+	background-color: #e7e7e7;//#CBCBAD;
+}
+.was-distinct .was-orig.highlight {
+	background-color: #e7e7e7;//#e1e1e1;
+}
+
+.was-distinct .was-reg {
+	display: none;
+}
+.was-distinct .was-seg {
+	display: none;
+}
+
+span[data-type="obRef"].highlighted,
+span[data-type="placeRef"].highlighted,
+span[data-type="persRef"].highlighted,
+.was-distinct .was-orig.highlighted {
+	background-color: #000;
+	color: #fff; 
+}
+
+
+p[data-type="mSummary"],
+p[data-type="mDate"] {
+  font-family: $font-headings;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #222;
+
+  display: none;
+}
+p[data-type="mDate"] {
+  
+}
+p[data-type="anDate"] {
+  display: none;
+}

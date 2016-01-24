@@ -1,0 +1,229 @@
+ /* 
+
+STYLE GUIDE: RULES
+
+- Limit LESS to variables and mixins (no nesting, guards, extend, etc.)
+- Classes and IDs are lowercase with words separated by a dash — this 
+- Prefer components over page level styles  aim for library like code,
+- break files like profile.less into smaller more focused files like: button.less, dialog.less, tooltip.less, etc.
+
+*/
+
+
+
+/* 
+
+MEDIA QUERIES
+http://stephen.io/mediaqueries/
+*/
+
+
+
+// TYPOGRAPHY
+/*[Sassline](http://jakegiltsoff.co.uk/posts/sassline-v2-0)
+
+*/
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -moz-tap-highlight-color: rgba(0,0,0,0);
+  tap-highlight-color: rgba(0,0,0,0);
+}
+
+html { 
+  font-size: 62.5%;
+}
+
+body {
+  background: $color-background;
+  font-family: $font-body;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  color: $color-body;
+
+  @include breakpoint($xsphone) {
+    @include defineBreakpoint("XSPHONE");
+  }
+  @include breakpoint($phone) {
+    @include defineBreakpoint("PHONE");
+  }
+  @include breakpoint($tablet) {
+    @include defineBreakpoint("TABLET");
+  }
+  @include breakpoint($medium) {
+    @include defineBreakpoint("MEDIUM");
+  }
+  @include breakpoint($large) {
+    @include defineBreakpoint("LARGE");
+  }
+  
+}
+
+#read {
+  margin: 0 auto;
+  padding-top: 105px;
+  padding-bottom: 150px;
+
+  width: $read-width-large;
+  @include breakpoint($xsphone) {
+    width: $read-width-xsphone;
+    padding-top: $mobile-header-scene-height + $mobile-header-anchor-height + $header-height-small + 20;
+    font-size: 20px;
+  }
+  @include breakpoint($phone) {
+    width: $read-width-phone;
+    padding-top: $mobile-header-scene-height + $mobile-header-anchor-height + $header-height-small + 20;
+    font-size: 22px;
+  }
+  @include breakpoint($tablet) {
+    width: $read-width-tablet;
+    padding-top: $header-height-large + 5;
+    font-size: 22px;
+  }
+  @include breakpoint($medium) {
+    width: $read-width-medium;
+    padding-top: $header-height-large + 5;
+    font-size: 24px;
+  }
+  @include breakpoint($large) {
+    width: $read-width-large;
+    padding-top: $header-height-large + 5;
+    font-size: 24px;
+  }
+
+  // medium's line height and tracking settings
+  line-height: 1.4;
+  letter-spacing: 0.01rem;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  //font-variant-caps: small-caps;
+  // font-feature-settings: "smcp";
+
+  font-variant-numeric: oldstyle-nums;
+  // font-feature-settings: "onum";
+  
+  -moz-font-feature-settings: "liga", "onum";
+   -ms-font-feature-settings: "liga", "onum";
+   -webkit-font-feature-settings: "liga", "onum";
+   font-feature-settings: "liga", "onum";
+
+  
+}
+
+// HEADINGS
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-headings;
+  font-weight: normal;
+  color: #000;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+
+
+.small {
+  font-size: 1rem;
+  color: $blue;
+}
+
+.smallcaps {
+  -webkit-font-feature-settings: "liga", "onum", "smcp";
+     -moz-font-feature-settings: "liga", "onum", "smcp";
+      -ms-font-feature-settings: "liga", "onum", "smcp";
+          font-feature-settings: "liga", "onum", "smcp";
+}
+
+/*
+
+## Typography Resources
+- [Medium CSS: Death to typewriters](https://medium.com/@mwichary/death-to-typewriters-technical-supplement-8f3c754626f29)
+- [Medium Pretty Fucking good](https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06)
+- [Contrast Rebellion](http://contrastrebellion.com/)
+
+weights in kit 
+| Chaparal | 300 | 400 | 700 |
+| Franklin |     |     |     |
+
+
+
+*/
+
+h1 + p {
+  // background: pink;
+}
+
+// Dropcap
+// h1 + p::first-letter {
+//   // color: yellow;
+//   font-size: 350%; 
+//   margin: 4px 0 -5px 0; 
+//   padding: 0 .1em 0 0; 
+//   // height: .7em; 
+//   line-height: .85em; 
+//   float: left; 
+//   color: #333; 
+//   *line-height: 1em; /* IE7 Only */ 
+// }
+
+p {
+  margin-bottom: 30px;
+
+  // Warning: Needed for oldIE support, but words are broken up letter-by-letter
+  // -ms-word-break: break-all;
+  //    word-break: break-all;
+
+  // Non standard for webkit
+  // word-break: break-word;
+
+  -webkit-hyphens: auto;
+    -webkit-hyphenate-limit-before: 2;
+    -webkit-hyphenate-limit-after: 3;
+    -webkit-hyphenate-limit-lines: 2;
+
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+p.was-said {
+  margin-bottom: 0;
+  //color: rgba(0,0,0,0.65);
+}
+
+p.was-said + p:not(.was-said) {
+  margin-top: 30px;
+}
+
+// hanging quotes
+p.was-said:first-letter { 
+  //margin-left: -8px;
+}
+p.was-said::before,
+p.was-said > span.was-reg:first-child {
+  content: " ";
+  margin-left: -8px;
+}
+
+a:hover:active {
+  color: red;
+}
+a:active {
+  color: red;
+}
+
+figure {
+  display: none;
+}
+
+
+
+
+

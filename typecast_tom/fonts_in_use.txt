@@ -1,0 +1,29 @@
+Fonts actively used in this project
+-----------------------------------
+
+
+Font name       :   brandon-grotesque
+Font provider   :   typekit
+
+******************************************************************************
+
+Font name       :   brioso-pro-display
+Font provider   :   typekit
+
+******************************************************************************
+
+Font name       :   HelveticaNeueETW01-55Rg
+Font provider   :   fonts.com
+
+******************************************************************************
+
+Font name       :   chaparral-pro
+Font provider   :   typekit
+
+******************************************************************************
+
+
+
+
+
+Created by Typecast on 2015/01/28.

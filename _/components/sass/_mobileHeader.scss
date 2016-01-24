@@ -1,0 +1,56 @@
+#mobile-header {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	height: $header-height-small + 15;
+	@include breakpoint($xsphone) {
+		top: $header-height-small;
+	}
+	@include breakpoint($phone) {
+		top: $header-height-small;
+	}
+	@include breakpoint($tablet) {
+		top: 0;
+	}
+	@include breakpoint($medium) {
+		top: 0;
+	}
+	@include breakpoint($large) {
+		top: 0;
+	}
+}
+.mobile-header-container {
+	margin: 0 auto;
+	@include breakpoint($xsphone) {
+		width: $read-width-xsphone;
+	}
+	@include breakpoint($phone) {
+		width: $read-width-phone;
+	}
+	@include breakpoint($tablet) {
+		width: $tablet;
+	}
+	@include breakpoint($medium) {
+		width: $medium;
+	}
+	@include breakpoint($large) {
+		width: $large;
+	}	
+}
+#mobile-header.show {
+	display: block;
+}
+
+
+.mobile__header--scene,
+.mobile__header--anchor {
+	width: 100%;
+	height: $mobile-header-anchor-height;
+	margin: 0;
+	font-family: $font-nav;
+	font-size: 1.4rem;
+	color: gray;
+}

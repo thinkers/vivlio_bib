@@ -1,0 +1,12 @@
+@mixin zIndex($howMuch) {
+	-webkit-transform:translateZ($howMuch);
+	   -moz-transform:translateZ($howMuch);
+		 -o-transform:translateZ($howMuch);
+		    transform:translateZ($howMuch);
+}
+@mixin translate3d($a, $b, $c) {
+	-webkit-transform:translate3d($a, $b, $c);
+	   -moz-transform:translate3d($a, $b, $c);
+		 -o-transform:translate3d($a, $b, $c);
+		    transform:translate3d($a, $b, $c);
+}

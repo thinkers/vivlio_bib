@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>A Child’s History of England</title>
+		<meta name="description" content="A Child’s History of England" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<link href="/indexes/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/indexes/vendor/owl.carousel/assets/owl.carousel.css">
+		<link rel="stylesheet" href="/indexes/style.css"/>
+
+		<script src="/indexes/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="/indexes/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="/indexes/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+		<script src="//use.typekit.net/hvc1zhu.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+	</head>
+
+	<body>
+		<div id="content">
+		</div>
+
+		<div id="footer" class="text-center">
+			<a href="/indexes/index.html" title="indexes">Back to characters</a>
+		</div>
+
+		<script>
+			var removeBlankObjects = function()  {
+				$('#objects [src="media/characters/blank.jpg"]').parent('figure').parent('div').remove();
+			};
+			var initCarousel = function() {
+				$(".owl-carousel").owlCarousel({
+					items: 1,
+					dots: true,
+					nav: true,
+					navText: [ "<", ">"]
+				});
+			};
+			$(function() { $("#content").load("data/c_julius_caesar.html .card", function(){
+				removeBlankObjects();
+				initCarousel();
+			}); });
+		</script>
+	</body>
+</html>

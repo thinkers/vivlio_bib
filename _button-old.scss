@@ -1,0 +1,69 @@
+.magic-button {
+	width: 80px;
+	display: inline-block;
+}
+
+.magic-button-container {
+	width: 80px;
+	display: inline-block;
+}
+.magic-button-container.show {
+	-webkit-transition: background 0.2s ease-in;
+	-moz-transition: background 0.2s ease-in;
+	-ms-transition: background 0.2s ease-in;
+	-o-transition: background 0.2s ease-in;
+	transition: background 0.2s ease-in; 
+
+	-webkit-transition-delay: 0.1s; /* Safari */
+    transition-delay: 0.1s;
+}
+.magic-button-container.locked {
+	-webkit-animation: bgColor 0.5s ; /* Chrome, Safari, Opera */ 
+    animation: bgColor 0.5s ;
+
+    background-color: #000;
+}
+/* Safari */ 
+@-webkit-keyframes bgColor {
+    from { background-color: #E1E1E1; }
+    to   { background-color: #000; }
+} 
+/* Standard Syntax */ 
+@keyframes bgColor {
+    from { background-color: #E1E1E1; }
+    to   { background-color: #000; }
+}
+
+
+.magic-button-circle {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.magic-button-circle.unpressed {
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: all 0.1s ease-in;
+	-ms-transition: all 0.1s ease-in;
+	-o-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in; 
+}
+.magic-button-circle.pressed {
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: all 0.1s ease-in;
+	-ms-transition: all 0.1s ease-in;
+	-o-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in; 
+}
+.magic-button-circle.locked {
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: all 0.1s ease-in;
+	-ms-transition: all 0.1s ease-in;
+	-o-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in; 
+
+	-moz-transform: translateX(50px);
+	-webkit-transform: translateX(50px);
+	-o-transform: translateX(50px);
+	-ms-transform: translateX(50px);
+	transform: translateX(50px);
+}

@@ -1,0 +1,156 @@
+#drawer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 170px;
+	margin-bottom: -500px;
+	background-color: #fff;
+	border-top: 1px solid #e1e1e1;
+	//overflow-y: auto;
+	@include zIndex(9999px);
+
+	-webkit-transition: all 0.5s ease-in-out;
+	   -moz-transition: all 0.5s ease-in-out;
+	     -o-transition: all 0.5s ease-in-out;
+	    	transition: all 0.5s ease-in-out;
+}
+#drawer.show {
+    -webkit-transform: translate(0, -480px);
+       -moz-transform: translate(0, -480px);
+    	 -o-transform: translate(0, -480px);
+    		transform: translate(0, -480px);
+
+    
+}
+.drawer-container {
+	font-size: 18px;
+	margin: 0 auto;
+	@include breakpoint($xsphone) {
+		width: $xsphone;
+	}
+	@include breakpoint($phone) {
+		width: $phone;
+	}
+	@include breakpoint($tablet) {
+		width: $tablet;
+	}
+	@include breakpoint($medium) {
+		width: $medium;
+	}
+	@include breakpoint($large) {
+		width: $large;
+	}
+}
+
+.drawer {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: inline-table;
+}
+.drawer__item {
+	display: table-cell;
+	vertical-align: middle;
+	height: 150px;
+	margin: 0;
+	padding: 0;
+	@include breakpoint($xsphone) {
+	}
+	@include breakpoint($phone) {
+	}
+	@include breakpoint($tablet) {
+	}
+	@include breakpoint($medium) {
+	}
+	@include breakpoint($large) {
+	}	
+}
+
+.drawer__item--img {
+	font-family: $font-headings;
+	@include breakpoint($xsphone) {
+		text-align: left;
+	}
+	@include breakpoint($phone) {
+		text-align: left;
+	}
+	@include breakpoint($tablet) {
+		width: ($tablet - $read-width-tablet)/2;
+		text-align: right;
+	}
+	@include breakpoint($medium) {
+		width: ($medium - $read-width-medium)/2;
+		text-align: right;
+	}
+	@include breakpoint($large) {
+		width: ($large - $read-width-large)/2;
+		text-align: right;
+	}
+}
+.drawer__item--img img {
+	max-height: 100px;
+	width: auto;
+	//border-radius: 50%;
+	margin-right: -50px;
+}
+
+.drawer__item--content {
+	padding-left: 100px;
+	@include breakpoint($xsphone) {
+		width: 0;
+	}
+	@include breakpoint($phone) {
+		width: 0;
+	}
+	@include breakpoint($tablet) {
+		width: $read-width-tablet;
+	}
+	@include breakpoint($medium) {
+		width: $read-width-medium;
+	}
+	@include breakpoint($large) {
+		width: $read-width-large;
+	}
+}
+.drawer__item--content.distinct {
+	padding-left: 0;
+}
+
+.drawer__content--header,
+.drawer__content--desc {
+	width: 100%;
+}
+.drawer__content--header {
+	font-family: $font-headings;
+	font-size: 1.6rem;
+	font-weight: 900;
+	margin-bottom: 10px;
+}
+.drawer__content--desc {
+	font-size: 1.6rem;
+}
+
+.drawer__item--dummy {
+	@include breakpoint($xsphone) {
+		width: 0;
+	}
+	@include breakpoint($phone) {
+		width: 0;
+	}
+	@include breakpoint($tablet) {
+		width: ($tablet - $read-width-tablet)/2;
+	}
+	@include breakpoint($medium) {
+		width: ($medium - $read-width-medium)/2;
+	}
+	@include breakpoint($large) {
+		width: ($large - $read-width-large)/2;
+	}
+}
+
+
+
+
+
+

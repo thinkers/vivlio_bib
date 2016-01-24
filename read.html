@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>A Child’s History of England</title>
+		<meta name="description" content="A Child’s History of England" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<link rel="stylesheet" href="_/css/animate.css">
+		<link rel="stylesheet" href="_/css/styles.css">
+
+		<script src="_/js/jquery-2.1.3.min.js"></script>
+		<script src="_/js/jquery.touchSwipe.min.js"></script>
+		<script src="_/js/jquery.scrollstop.min.js"></script>
+		<script src="_/js/waypoints/jquery.waypoints.min.js"></script>
+		<script src="_/js/waypoints/shortcuts/sticky.min.js"></script>
+		<script src="_/js/waypoints/shortcuts/inview.min.js"></script>
+		<script src="_/js/breakpoints.js"></script>
+
+		<script src="_/js/script.js"></script>
+		<script src="//use.typekit.net/hvc1zhu.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="header-container">
+				<ul class="nav">
+					<li class="nav__item nav__item--home">
+						<div class="nav__symbol nav__symbol--home"><span class="symbol--home">&gt;</span></div>
+						<div class="nav__text">HOME</div>
+					</li><!--
+					--><li class="nav__item nav__item--title">
+						<p class="chapter__title"></p>
+						<p class="chapter__milestone"></p>
+						<p class="chapter__anchor"></p>
+					</li><!--
+					--><li class="nav__item nav__item--toc">
+						<div class="nav__symbol nav__symbol--toc"><span class="symbol--toc">&gt;</span></div>
+						<div class="nav__text">NAV</div>
+						<div id="navdrop" class="hide"></div>
+					</li><!--
+					--><li class="nav__item nav__item--magic">
+						<div class="nav__symbol magic-button-circle unpressed"><span class="symbol--magic">*</span></div>
+						<div class="nav__text nav__text--magic">MAGIC</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="mobile-header">
+			<div class="mobile-header-container">
+				<p class="mobile__header--scene"></p>
+				<p class="mobile__header--anchor"></p>
+			</div>
+		</div>
+
+		<div id="read">
+		</div>
+
+		<div id="drawer">
+			<div class="drawer-container">
+				<ul class="drawer">
+					<li class="drawer__item drawer__item--img"></li>
+					<li class="drawer__item drawer__item--content">
+						<div class="drawer__content--header"></div>
+						<div class="drawer__content--desc"></div>
+					</li>
+					<li class="drawer__item drawer__item--dummy"></li>
+				</ul>
+			</div>
+		</div>
+
+		<script>
+			window.onhashchange = function() { window.location.reload(); };
+			$(function() {
+				if(window.location.hash) {
+					var hash = window.location.hash.substring(1);
+					tom.init();
+					tom.loadChapter(hash);
+					tom.loadNavdrop(hash);
+				}
+			});
+		</script>
+	</body>
+</html>

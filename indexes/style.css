@@ -1,0 +1,408 @@
+
+/* ************************************************* indexes */
+
+.indexes {
+	background-color: #E1E1E1;
+	background-image: url("img/bg_mark.png");
+	background-position: 0 170px;
+	background-repeat: no-repeat;
+	background-size: 500px;
+	background-attachment: fixed;
+	padding: 0 20px;
+}
+@media(max-width: 768px) {
+	.indexes {
+		padding: 0;
+	}
+}
+
+#header {
+	padding: 8px;
+}
+#header a {
+	color: #999;
+	text-decoration: none;
+}
+#header .symbol--home {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	-webkit-transform: rotate(-90deg);
+	   -moz-transform: rotate(-90deg);
+	     -o-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+}
+
+/* *********************************************** accordeon */
+
+.panel-group .panel {
+	border-radius: 0;
+}
+.panel-group .panel + .panel {
+	margin-top: 0;
+}
+
+.panel-default {
+	border-color: #222;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+.panel-default > .panel-heading {
+	background: inherit;
+	border-radius: 0;
+}
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+	border: 0;
+}
+
+.panel-title {
+	text-align: center;
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 2pt;
+}
+.panel-title a {
+	display: block;
+}
+
+/* ************************************************** common */
+
+.intro {
+	font-family: "chaparral-pro", serif;
+	font-size: 24px;
+	width: 75%;
+	margin: 70px auto;
+}
+@media(max-width: 768px) {
+	.intro {
+		font-size: 18px;
+	}
+}
+
+label {
+	background: #222;
+	color: #EAEAEA;
+	padding: 5px;
+	margin: 10px 5px;
+	text-transform: uppercase;
+
+	font-family: "franklin-gothic-urw", sans-serif;
+	letter-spacing: 1pt;
+}
+
+figure {
+	vertical-align: top;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+figure > img.thumb {
+	width: auto;
+	height: 130px;
+}
+
+figure figcaption {
+	height: 80px;
+}
+
+.owl-item {
+	padding: 0 15px;
+}
+
+.owl-dot {
+	background: #222;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 100%;
+}
+.owl-dot + .owl-dot {
+	margin-left: 3px;
+}
+.owl-dot.active {
+	background: #FFF;
+	border: 1px solid #222;
+}
+
+.owl-nav {
+	font-family: "chaparral-pro", serif;
+	font-size: 32px;
+}
+.owl-prev,
+.owl-next {
+	position: absolute;
+	top: 0;
+}
+.owl-prev {
+	left: -10px;
+}
+.owl-next {
+	right: -10px;
+}
+
+@media(max-width: 768px) {
+	.owl-dots {
+		display: none !important;
+	}
+}
+
+/* *************************************************** words */
+
+.words label {
+	letter-spacing: 1.5pt;
+	padding: 5px 8px;
+}
+
+.words .was-distinct + .was-distinct {
+	margin-top: 40px;
+}
+.words label {
+	margin-bottom: 20px;
+}
+.words .was-orig {
+	font-weight: bold;
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	padding-right: 8px;
+}
+.words .was-reg {
+	font-family: "chaparral-pro", serif;
+	font-weight: normal;
+	font-size: 18px;
+	padding-left: 8px;
+}
+
+/* ******************************************* illustrations */
+
+.illustrations figure img {
+	height: 170px;
+}
+.illustrations figure figcaption {
+	height: 120px;
+}
+.illustrations figure figcaption label {
+	font-family: "chaparral-pro", serif;
+	font-weight: normal;
+	font-size: 18px;
+	text-transform: none;
+	background: inherit;
+	color: inherit;
+	margin-bottom: 0;
+}
+.illustrations figure figcaption .was-head {
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+/* ******************************************* places */
+
+.places figure img {
+	height: 170px;
+}
+.places figure figcaption {
+	height: 120px;
+}
+.places figure figcaption label {
+	font-family: "chaparral-pro", serif;
+	font-weight: normal;
+	font-size: 18px;
+	text-transform: none;
+	background: inherit;
+	color: inherit;
+	margin-bottom: 0;
+}
+.places figure figcaption .was-head {
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+/* ************************************************* objects */
+
+.objects figure figcaption {
+	height: 160px;
+}
+.objects figure figcaption .was-desc {
+	font-family: "chaparral-pro", serif;
+	font-size: 17px;
+	line-height: 1.1;
+}
+
+/* ********************************************** characters */
+
+.characters figure > img.thumb {
+	height: 100px;
+	width: auto;
+	border-radius: 100%;
+}
+
+.characters figure figcaption {
+	padding: 0 20px;
+	height: 300px;
+}
+
+figure figcaption .was-note {
+	font-family: "chaparral-pro", serif;
+	font-size: 18px;
+	line-height: 1.2;
+}
+
+figure figcaption > a {
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-weight: 400;
+	letter-spacing: 1pt;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #777;
+}
+figure figcaption > a:hover {
+	text-decoration: none;
+}
+
+/* **************************************************** card */
+
+.navigation {
+	height: 60px;
+}
+.card,
+.card [id] {
+	padding-top: 60px;
+}
+.card > section {
+	margin: 30px auto;
+}
+
+.card .navigation {
+	background: #FFF;
+	background-color: #FFF;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	padding: 15px 0;
+	margin: 0 auto;
+	border-bottom: 1px solid #999;
+	z-index: 5;
+
+	font-family: "franklin-gothic-urw", sans-serif;
+	letter-spacing: 1pt;
+}
+
+.navigation ul {
+	font-size: 0;
+	margin: 0;
+}
+.navigation li {
+	font-size: 16px;
+}
+
+.navigation li + li {
+	border-left: 1px solid #222;
+}
+
+.navigation li > a {
+	display: inline-block;
+	margin: 0 5px;
+	padding: 5px;
+	color: #222;
+}
+
+.card .intro {
+	border-bottom: 2px solid #222;
+	width: inherit;
+}
+.card .intro > div {
+	margin-bottom: 80px;
+}
+.card .intro label {
+	padding: 5px 20px;
+	letter-spacing: 2pt;
+	font-size: 20px;
+	font-weight: 400;
+}
+.card .intro .caption {
+	margin: 40px auto 0;
+	text-align: left;
+	line-height: 1.3;
+	font-size: 24px;
+}
+
+.card .quotes label,
+.card .illustrations label,
+.card .objects label,
+.card .relations label {
+	font-weight: 400;
+}
+
+.card .quotes .listofquotes {
+	font-family: "chaparral-pro", serif;
+	font-size: 32px;
+	margin: 50px auto;
+}
+.card .quotes .listofquotes .source {
+	color: #777;
+	font-size: 16px;
+	margin: 25px auto;
+}
+.card .quotes .listofquotes .owl-dots {
+	display: none !important;
+}
+
+.card .illustrations .listofillustrations {
+	margin: 50px auto;
+}
+.card .illustrations figure figcaption {
+	height: auto;
+	font-family: "chaparral-pro", serif;
+}
+.card .listofillustrations img {
+	width: 100px;
+	height: 100px;
+}
+
+.card .listofobjects label {
+	background: inherit;
+	color: #222;
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-weight: 400;
+	letter-spacing: 1pt;
+	margin-top: 50px;
+}
+.card .listofobjects .desc {
+	font-family: "franklin-gothic-urw", sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+}
+.card .listofobjects figure > img {
+	max-height: 300px;
+	width: auto;
+	margin: auto;
+}
+
+/* ************************************************** footer */
+
+#footer {
+	margin: 50px auto;
+	font-family: "chaparral-pro", serif;
+	font-size: 20px;
+}
+#footer a {
+	text-decoration: none;
+	color: #222;
+	border-bottom: 1px solid #222;
+}
+
+/* **************************************************** font */
+
+.franklin {
+	font-family: "franklin-gothic-urw", sans-serif;
+}
+.chaparral {
+	font-family: "chaparral-pro", serif;
+}
+
